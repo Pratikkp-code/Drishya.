@@ -131,7 +131,7 @@ export default function UploadPage() {
     }
   };
   
-  // MODIFIED: Use new currency and fetch the correct fee (0.0001 Eth)
+  // MODIFIED: Use new currency and fetch the correct fee (0.0001 PAS)
   const uploadFeeEth = useMemo(() => (uploadFee ? (Number(uploadFee) / 1e18).toFixed(4) : "0.0001"), [uploadFee]);
   const userHasProfile = userProfile && userProfile[1];
 
@@ -184,7 +184,7 @@ export default function UploadPage() {
                 <h3 className="text-2xl font-semibold text-white border-l-4 border-teal-500 pl-4">Movie Details</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2"><Label htmlFor="title">Movie Title <span className="text-red-500">*</span></Label><Input id="title" name="title" value={formData.title} onChange={handleInputChange} required disabled={isProcessing} placeholder="e.g., The Decentralized Dream" /></div>
-                  <div className="space-y-2"><Label htmlFor="pricePerDay">Price Per Day (Eth) <span className="text-red-500">*</span></Label><Input id="pricePerDay" name="pricePerDay" type="number" step="0.0001" min="0.0001" value={formData.pricePerDay} onChange={handleInputChange} required disabled={isProcessing} placeholder="e.g., 0.005" /></div>
+                  <div className="space-y-2"><Label htmlFor="pricePerDay">Price Per Day (PAS) <span className="text-red-500">*</span></Label><Input id="pricePerDay" name="pricePerDay" type="number" step="0.0001" min="0.0001" value={formData.pricePerDay} onChange={handleInputChange} required disabled={isProcessing} placeholder="e.g., 0.005" /></div>
                 </div>
                 <div className="space-y-2"><Label htmlFor="description">Description</Label><Textarea id="description" name="description" value={formData.description} onChange={handleInputChange} rows={4} disabled={isProcessing} placeholder="A short synopsis of your movie..." /></div>
                 <div className="space-y-2"><Label>Genre</Label><Select name="genre" value={formData.genre} onValueChange={(v) => setFormData(p => ({ ...p, genre: v }))} disabled={isProcessing}><SelectTrigger><SelectValue placeholder="Select genre" /></SelectTrigger><SelectContent>{genres.map((g) => <SelectItem key={g} value={g}>{g}</SelectItem>)}</SelectContent></Select></div>
@@ -201,7 +201,7 @@ export default function UploadPage() {
 
               <Alert className="bg-gray-900/70 border-gray-700">
                   <UploadCloud className="h-4 w-4 text-cyan-400" /><AlertTitle className="text-white">Platform Fee</AlertTitle>
-                  <AlertDescription className="text-gray-400 mt-2">A one-time fee of <strong className="text-cyan-300">{uploadFeeEth} Eth</strong> is required to upload your movie.</AlertDescription>
+                  <AlertDescription className="text-gray-400 mt-2">A one-time fee of <strong className="text-cyan-300">{uploadFeeEth} PAS</strong> is required to upload your movie.</AlertDescription>
               </Alert>
             </CardContent>
             <CardFooter className="bg-gray-800 p-6">
