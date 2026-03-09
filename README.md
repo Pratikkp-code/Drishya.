@@ -6,7 +6,6 @@ It reshapes the relationship between filmmakers and their audience by **removing
 ---
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Powered by: Ethereum Blockchain](https://img.shields.io/badge/Powered%20by-Ethereum%20Blockchain-627EEA?logo=ethereum)
 ![Deployment: Vercel](https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel)
 ![Meme Spotlight: Chainlink VRF](https://img.shields.io/badge/Meme%20Spotlight-Chainlink%20VRF-375BD2?logo=chainlink)
 
@@ -70,7 +69,7 @@ Drishya solves these problems by leveraging **Web3 technology** and the **Ethere
 - Animations: `Framer Motion`
 
 **Web3 Integration**
-- Blockchain: `Ethereum`
+- Blockchain: `Polkadot Hub`
 - Wallet: `RainbowKit`
 - Contract Interaction: `wagmi`, `viem`
 - Randomness: `Chainlink VRF`
