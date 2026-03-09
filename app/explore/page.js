@@ -297,8 +297,7 @@ export default function ExplorePage() {
                                                     <span>{Number(movie.rentalCount)} rentals</span>
                                                 </div>
                                                 <div className="font-semibold text-teal-400">
-                                                    {/* MODIFIED: price48h -> pricePerDay and CAMP -> Eth */}
-                                                    {formatPrice(movie.pricePerDay)} Eth/day
+                                                    {formatPrice(movie.pricePerDay)} PAS/day
                                                 </div>
                                             </div>
                                             <Link href={`/movie/${movie.id}`} className="mt-auto">
